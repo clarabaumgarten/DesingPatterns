@@ -1,0 +1,3 @@
+- Em resolution 2 temos duas vezes um factory method atuando
+    - Temos ela dentro da função client e dentro das classes concretas dos personagens
+- Quando se trata de problemas de grandes escala, parece ficar bem confuso e prolixo se formos usar em cada classe

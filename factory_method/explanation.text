@@ -1,0 +1,14 @@
+#Probemas solucionados:
+- baixa reutilização de código
+- alto acoplamento
+- alterar muitas partes de código pra algumas alterações
+
+
+#Vantagens:
+- flexibilidade
+- encapsulamento da criação de um objeto
+- baixo acoplamento
+
+
+#Contras:
+- pode acabar deixando o código bastante complexo com o passar do tempo
