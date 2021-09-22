@@ -1,6 +1,38 @@
 from abc import ABC, abstractmethod
 
 
+class Creator(ABC):
+    @abstractmethod
+    def factory_method(self):
+        pass
+    
+    def some(self):
+        character = self.factory_method()
+        print(character.show_moves())
+        print(character.heal())
+        print(character.change_costumes())
+
+
+class MilitaryCreator(Creator):
+    def factory_method(self):
+        return Military()
+
+
+class PirateCreator(Creator):
+    def factory_method(self):
+        return Pirate()
+
+
+class WizardCreator(Creator):
+    def factory_method(self):
+        return Wizard()
+
+
+class FighterCreator(Creator):
+    def factory_method(self):
+        return Fighter()
+
+
 class Character(ABC):
     @abstractmethod
     def show_moves(self):
@@ -59,20 +91,18 @@ class Fighter(Character):
         return "Calção muay thay"
 
 
-def client(characterType: str):
+def factory_function(characterType: str):
     if characterType == "wizard":
-        return Wizard()
+        return WizardCreator()
     elif characterType == "military":
-        return Military()
+        return MilitaryCreator()
     elif characterType == "pirate":
-        return Pirate()
+        return PirateCreator()
     elif characterType == "fighter":
-        return Fighter()
+        return FighterCreator()
 
 
 if __name__ == "__main__":
     character = input("Qual personagem você escolhe?\n")
-
-    print(client(character).show_moves())
-    print(client(character).heal())
-    print(client(character).change_costumes())
+    characterConcrete = factory_function(character)
+    characterConcrete.some()

@@ -1,5 +1,5 @@
 Benefícios:
 - Tornou o código menos acoplado, dependendo menos um do outro
 - Deixou incrívelmente mais flexível e dinâmico
-- Se for adicionar mais uma subclasse, facilamente poderiamos adicionar mais uma condição no client
+- Se for adicionar mais uma subclasse, facilamente poderiamos adicionar mais uma condição no factory function
 - Para um problema pequeno, deixou mais legível e visualmente mais bonito

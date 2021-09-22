@@ -35,7 +35,7 @@ class Square(Shape):
         return f"Altura: 7cm e Largura: 7cm"
 
 
-def client(ShapeType: str):
+def factory_function(ShapeType: str):
     if ShapeType == "circle":
         return Circle()
     if ShapeType == "rectangle":
@@ -46,7 +46,7 @@ def client(ShapeType: str):
 
 if __name__ == "__main__":
     shape = input("Qual tipo de shape você quer?\n")
-    area = client(shape).area()
-    measures = client(shape).measures()
+    area = factory_function(shape).area()
+    measures = factory_function(shape).measures()
     print(f"{area}cm²")
     print(measures)
