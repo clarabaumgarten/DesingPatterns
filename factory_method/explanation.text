@@ -1,16 +1,24 @@
+-- FACTORY METHOD --
+
+# Definição:
+Situação em qual existe uma classe que contém um método fábrica que sera sobrescrito nas suas subclasses
+para atender às criações de diferentes objetos.
+
+# Construção:
+Devemos ter ou um método que instância as classes ou teremos uma classe abstrata que haverá o método fábrica abstrato
+e suas demais lógicas.
+Para cada classe que iremos usar no factory method, é necessário ter uma subclasse com o seu factory method definido.
+
 #Probemas solucionados:
 - quando não se sabe quais/quantas classes serão necessárias
-- baixa reutilização de código
+- baixa reutilização de código - difícil manutenção, pois será necessário mexer em muitos lugars
 - alto acoplamento com código cliente
-- alterar muitas partes de código pra algumas alterações (difícil manutenção)
 
+# Vantagens:
+- Flexibilidade
+- Encapsulamento da criação de um objeto - princípio única responsabilidade
+- Baixo acoplamento dos concrete product com o código cliente
+princípio OCP deixando mais aberto a extensão de novas funcionalidades (fácil manutenção)
 
-#Vantagens:
-- flexibilidade
-- encapsulamento da criação de um objeto - princípio única responsabilidade
-- baixo acoplamento dos concrete product com o código cliente
-    princípio OCP deixando mais aberto a extensão de novas funcionalidades (fácil manutenção)
-
-
-#Contras:
+# Desvantagens:
 - pode acabar deixando o código bastante extenso com o passar do tempo com muitas subclasses desnecessárias
