@@ -1,0 +1,26 @@
+-- SINGLETON --
+
+# Definição:
+Situação em que devemos ter apenas uma instância ou um número limite de instâncias permitidas para uma classe.
+Têm se tornado quase um anti-pattern e pode ser facilmente trocado para o monostate, onde existem outras instâncias,
+mas que compartilham das mesmas informações entre si (pois são estáticas).
+
+# Construção:
+Devemos ter uma classe com seu construtor privado, porém no python, não existe um bom encapsulamento,
+então será público, porém com condicionais dentro dele.
+Um atributo estático dele mesmo - no python não tem como ser estático, o que leva a tratamento especial.
+Um método que verifica se já existe uma instância e retorna o objeto.
+
+#Probemas solucionados:
+- muitas instâncias sem necessidade da mesma classe em várias partes do código
+- pouco controle sobre os acessos e muito uso desnecessário de memória
+
+# Vantagens:
+- Redução de memória
+- Maior controle de acesso às informações
+- Pode substituir as variaveis globais
+
+# Desvantagens:
+- Se for mal utilizado, pode acabar deixando algumas informações expostas a códigos que não deveriam ter acesso
+- Difícil reverter
+- Vai contra o princípio de responsabilidade única
