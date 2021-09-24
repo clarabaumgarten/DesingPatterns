@@ -1,0 +1,21 @@
+-- ABSTRACT FACTORY --
+
+# Definição:
+Fornecer criação de famílias de objetos compatíveis.
+Uma camada de abstração a mais que o factory method.
+
+# Construção:
+Uma classe abstrata com dois métodos abstratos. Subclasses que implementam
+esses métodos de acordo com as categorias/famílias.
+
+#Probemas solucionados:
+- Desorganização (desagrupamento de objetos semelhantes), desacopla a criação de classe concreata do cliente
+- Quando uma família de objetos precisa trabalhar em conjunto e se tem a necessidade
+de garantir essa restrição
+
+# Vantagens:
+- Classes serão sempre compatíveis entre si
+- Segue SRD e OCP
+
+# Desvantagens:
+- Mais complexo do que normalmente se faria
