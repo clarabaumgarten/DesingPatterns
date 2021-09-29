@@ -1,0 +1,26 @@
+-- BUILDER --
+
+# Definição:
+Situação em que devemos ter uma classe abstrata e suas demais subclasses para cuidar da criação de objetos
+muito complexos. Separando a criação em etapas, caso necessário.
+Complexos em que sentido:
+- composites
+- construtores muito longos
+- algum algoritmo que precisa ser rodado antes ou durante a criação do objeto
+
+# Construção:
+Contruir uma classe abstrata que contenha todos os métodos necessários para as etapas. Em seguida, construir
+suas subclasses para a realização destes métodos para a criação do product.
+Caso seja necessário, podemos criar uma classe director, onde a sequência das etapas podem ser feitas nela ao
+invés de ser feito do cliente, ou seja, retirando a necessidade do cliente saber as etapas.
+
+#Probemas solucionados:
+- aplicando SRP porque a criação vai estar separada da utilização
+- simplificando a construção de objetos complexos
+
+# Vantagens:
+- SRP e OCP
+- desacopla a classe product do cliente
+
+# Desvantagens:
+- Um dos padrões mais complexos
